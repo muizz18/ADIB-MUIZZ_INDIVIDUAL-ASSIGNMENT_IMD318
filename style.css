@@ -1,0 +1,562 @@
+/* =====================
+   RESET & BASIC
+   ===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* =====================
+   LAYOUT
+   ===================== */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =====================
+   SIDEBAR
+   ===================== */
+.sidebar {
+    width: 230px;
+    background-color: #0a0a0a;
+    padding: 20px;
+    border-right: 3px solid red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+    color: red;
+    font-size: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+
+/* =====================
+   CONTENT AREA
+   ===================== */
+.content {
+    margin-left: 360px;
+    padding: 100px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* =====================
+   HEADINGS
+   ===================== */
+.content h1 {
+    margin-bottom: 60px;
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+}
+
+/* =====================
+   IMAGES
+   ===================== */
+.profile-img {
+    width: 150px;
+    border-radius: 19px;
+    margin-bottom: 10px;
+    border: 3px solid red;
+}
+
+/* =====================
+   LISTS
+   ===================== */
+.sport-list,
+.about-list,
+.content ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sport-list li,
+.about-list li,
+.content ul li {
+    background-color: #1e1e1e;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid red;
+    transition: 0.3s;
+}
+
+.sport-list li:hover,
+.about-list li:hover,
+.content ul li:hover {
+    background-color: #2a2a2a;
+    border-left: 5px solid #ff4d4d;
+}
+
+/* =====================
+   PARAGRAPHS
+   ===================== */
+.content p {
+    margin: 8px 0;
+}
+
+/* =====================
+   GALLERY
+   ===================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid red;
+}
+
+/* =====================
+   RESUME PAGE ONLY
+   ===================== */
+.resume-page .content p,
+.resume-page .content ul {
+    max-width: 600px;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 220px;
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid red;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+	
+	
+}
+
+/* =====================
+   RESUME PRO DESIGN
+   ===================== */
+
+.resume-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.resume-left {
+    background-color: #0f0f0f;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.resume-name {
+    margin-top: 15px;
+    font-size: 22px;
+    color: red;
+}
+
+.resume-title {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.resume-right {
+    background-color: #151515;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid red;
+}
+
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-section h3 {
+    color: red;
+    margin-bottom: 15px;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.resume-section p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.resume-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-section ul li {
+    background-color: #1e1e1e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid red;
+    border-radius: 5px;
+}
+
+/* =====================
+   RESUME RESPONSIVE
+   ===================== */
+
+@media screen and (max-width: 768px) {
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-left {
+        margin-bottom: 20px;
+    }
+}
+
+/* =====================
+   ABOUT PAGE PRO DESIGN
+   ===================== */
+
+.about-layout {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.about-card {
+    background-color: #151515;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border-left: 5px solid red;
+}
+
+.about-card h3 {
+    color: red;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+}
+
+.experience-item h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.experience-item h4 span {
+    color: #ff4d4d;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.experience-item p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+
+/* =====================
+   HOME PAGE PRO DESIGN
+   ===================== */
+
+.home-layout {
+    max-width: 900px;
+    width: 100%;
+}
+
+.home-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-name {
+    font-size: 28px;
+    margin-top: 20px;
+    line-height: 1.3;
+}
+
+.home-name span {
+    color: white;
+}
+
+.home-tagline {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.home-card {
+    background-color: #151515;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid red;
+}
+
+.home-card p {
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+
+/* =====================
+   CONTACT PAGE PRO DESIGN
+   ===================== */
+
+.contact-layout {
+    max-width: 800px;
+    width: 100%;
+}
+
+.contact-card {
+    background-color: #151515;
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 5px solid red;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    font-size: 28px;
+    margin-right: 20px;
+    color: red;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   HOME SOCIAL ICONS
+   ===================== */
+
+.home-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 26px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: red;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+/* =====================
+   HOME PAGE – PRO SPLIT DESIGN
+   ===================== */
+
+.home-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    width: 100%;
+    align-items: center;
+}
+
+/* LEFT SIDE */
+.home-left h1 {
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.home-left h1 span {
+    color: red;
+}
+
+.home-role {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.home-desc {
+    color: #ccc;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* SOCIAL */
+.home-social {
+    display: flex;
+    gap: 20px;
+}
+
+.home-social a {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #1e1e1e;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-social a:hover {
+    background-color: red;
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* RIGHT SIDE IMAGE */
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-shape {
+    width: 280px;
+    height: 320px;
+    border: 4px solid red;
+    clip-path: polygon(
+        50% 0%,
+        90% 20%,
+        100% 60%,
+        50% 100%,
+        0% 60%,
+        10% 20%
+    );
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255,0,0,0.3);
+}
+
+.profile-shape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =====================
+   HOME RESPONSIVE
+   ===================== */
+
+@media screen and (max-width: 768px) {
+    .home-split {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-desc {
+        margin: 0 auto 30px;
+    }
+
+    .home-social {
+        justify-content: center;
+    }
+}
