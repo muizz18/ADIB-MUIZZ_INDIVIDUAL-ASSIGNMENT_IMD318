@@ -1,0 +1,165 @@
+/* Reset & basic */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #0a0a0a;
+    padding: 20px;
+    border-right: 3px solid red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+    color: red;
+    font-size: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+
+/* Content */
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* Headings */
+.content h1 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+}
+
+/* Images */
+.profile-img {
+    width: 200px;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 20px;
+    border: 3px solid red;
+}
+
+/* Lists styling */
+.sport-list,
+.about-list,
+.content ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+.sport-list li,
+.about-list li,
+.content ul li {
+    background-color: #1e1e1e;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid red;
+    transition: 0.3s;
+}
+
+.sport-list li:hover,
+.about-list li:hover,
+.content ul li:hover {
+    background-color: #2a2a2a;
+    border-left: 5px solid #ff4d4d;
+}
+
+/* Resume paragraphs */
+.content p {
+    margin: 8px 0;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 700px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid red;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+    .content {
+        margin-left: 220px;
+        padding: 20px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid red;
+    }
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
